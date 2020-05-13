@@ -1,4 +1,4 @@
 # personal-portfolio 
 
-<a href="https://lufemas.github.io/personal-portfolio-temp/">Live Page Here</a>
+<a href="https://lufemas.github.io/personal-portfolio/">Live Page Here</a>
 
