@@ -195,6 +195,10 @@
     vertical-align: middle;
     margin-right: -0.25em;
   }
+
+  .logo-long{
+    display: none;
+  }
   
   .nav {
     display: flex;
@@ -580,6 +584,12 @@
     .nav {
       justify-content: space-between;
     }
+
+    
+  .logo-long{
+    display: inline;
+  }
+  
 
     .projects-grid a{
       cursor: pointer;
