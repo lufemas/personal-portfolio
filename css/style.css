@@ -7,7 +7,7 @@
     --dark-green: #056319;
 
     --main-white: #f0f0f0;
-    --main-red: #be3144;
+    --main-red: #f75b70;
     --main-blue: #45567d;
     --main-gray: #303841;
   }
@@ -181,10 +181,24 @@
   }
 
   /* nav */
+
+  .logo{
+    color: var(--dark-purple);
+    padding-left: 2rem;
+    font-size: 2rem;
+  }
+
+  .logo::before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
   
   .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     position: sticky;
     top: 0;
     left: 0;
@@ -216,8 +230,38 @@
   /* Welcome section */
   
 
+  /* About Section */
   
+  .about-section{
+    text-align: center;
+    padding: 10rem 2rem;
+    background: #222;
+    text-align: left;
+    padding-bottom: 0;
+  }
+
+  .about-section p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    letter-spacing: .05em;
+    word-spacing: .1em;
+    margin-top: .25em;
+  }
+
+  .about-section a{
+    color: var(--main-white);
+    font-weight: bold;
+    text-decoration: underline;
+  }
  
+  .about-section a:hover{
+    color: var(--main-green);
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--main-green);
+
+  }
+
   /* Projects section */
   
   .projects-section {
@@ -226,7 +270,7 @@
     background: #222;
   }
   
-  .projects-section-header {
+  .section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid var(--main-white);
@@ -246,15 +290,42 @@
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
+    transition: all 0.2s ease-out;
   }
 
   
   .project {
+    perspective: 200px;
+
     transform: scale(1);
     background: var(--main-green);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
     transition: all 0.2s ease-out;
+    /* animation: project-perspective-back .5s forwards ; */
+    /* -webkit-backface-visibility: hidden; */
+
+  }
+
+  .project-about{
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    border-left: solid .3em var(--main-green);
+    /* top: -150px; */
+    /* transform: scaleY(0); */
+    /* transform: rotateX(120deg); */
+    /* filter: opacity(0); */
+    transform-origin: bottom;
+    font-size: .75em;
+    font-family: 'Poppins';
+    /* font-weight: bold; */
+    padding: 1em;
+    color: rgb(255, 255, 255);
+    background-color: #222222f1;
+    /* transition: all .5s ease-in-out; */
+    animation: project-about-anim-hide .5s forwards ;
+
   }
   
   .code {
@@ -263,9 +334,58 @@
   }
 
   .project:hover{
+    perspective: 200px;
     transform: scale(1.2);
     z-index: 2;
     box-shadow: rgba(0, 0, 0, 0.747) .5rem .5rem 1rem .5rem;
+    /* animation: project-perspective .5s forwards ; */
+
+  }
+/* 
+  @keyframes project-perspective {
+    0% {  perspective: 0; }
+
+    1%   {perspective: 200px;}
+    
+    100% {perspective: 200px;}
+  }
+
+  
+  @keyframes project-perspective-back {
+    0% {  perspective: 2000; }
+
+    99%   {perspective: 200px;}
+    
+    100% {perspective: 0px;}
+  } */
+
+  .project:hover .project-about{
+
+    bottom: -1px;
+    animation: project-about-anim .5s forwards;
+  }
+
+  @keyframes project-about-anim-hide {
+    0% { transform: rotateX(0deg) translate3d( 0, 0, 0);}
+
+    75%   {filter: opacity(1);}
+    
+    100%   {
+    transform: rotateX(132deg) translate3d( 0, 0, 0);
+    filter: opacity(0);   
+    }
+  }
+
+  @keyframes project-about-anim {
+    0%   {
+    transform: rotateX(132deg) translate3d( 0, 0, 0);
+    filter: opacity(0);
+
+    }
+
+    25%   { filter: opacity(1);}
+
+    100% {transform: rotateX(0deg) translate3d( 0, 0, 0);}
   }
   
   .project:hover .code {
@@ -327,8 +447,8 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 80vh;
-    padding: 0 2rem;
+    /* height: 80vh; */
+    padding: 8rem 2rem;
     background: var(--dark-purple);
   }
   
@@ -368,10 +488,24 @@
   footer {
     font-weight: 300;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
     background: #222;
     /* border-top: 4px solid var(--main-red); */
+  }
+
+  footer nav .nav-list li a{
+    padding: 1em;
+    font-size: 1em;
+    color: var(--main-white);
+    text-decoration: underline;
+  }
+
+  footer nav .nav-list li a:hover{
+    color: var(--main-green);
+    background-color: transparent;
   }
   
   footer > p {
@@ -382,10 +516,73 @@
     vertical-align: middle;
   }
 
+  .sendmail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: .25em;
+  }
+
+  .sendmail .fields{
+    margin-top: 1.5em;
+    width: 100%;
+
+  }
+
+  .fields label{
+    margin-bottom: .25em;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .fields input, .fields textarea{
+    width: 100%;
+    padding: .75em;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+  .fields textarea{
+    resize: none;
+  }
+
+  .btn-sendmail{
+    margin-top: 1.5em;
+    margin-bottom: .25em;
+
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    background: var(--main-green);
+    color: var(--dark-purple);
+    transform: scale(1);
+    transition: all 0.3s ease;
+  }
+
+  .btn-sendmail:hover {
+    transform: scale(1.1);
+    background: var(--main-purple);
+    color: var(--main-white);
+  }
+
+  .validation-alert{
+    color: var(--main-red);
+    font-weight: bold;
+    font-style: oblique;
+    display: none;
+  }
+
 
   @media (min-width: 48em) {
+
+    .nav {
+      justify-content: space-between;
+    }
+
     .projects-grid a{
-        cursor: pointer;
+      cursor: pointer;
       display: flex;
       flex-direction: column-reverse;
     }
@@ -416,6 +613,18 @@
         width: 90%;
         margin: 0 auto;
       }
+
+      .about-section p{
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .sendmail{
+        width: 70%;
+      }
+
+
   }
 
 
@@ -446,5 +655,9 @@
       .welcome-section .hero-gif{
         width: 80%;
         margin: 0 auto;
+      }
+
+      .sendmail{
+        width: 50%;
       }
   }

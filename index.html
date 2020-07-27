@@ -18,7 +18,7 @@
   rel="stylesheet"
 />
 <link
-  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+  href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
   rel="stylesheet"
   />
 
@@ -33,9 +33,10 @@
 </section>
 
 <nav id="navbar" class="nav">
+    <a class="logo" href="#welcome-section"><strong>JR</strong>.maschietto</a>
     <ul class="nav-list">
       <li>
-        <a href="#welcome-section">About</a>
+        <a href="#about">About</a>
       </li>
       <li>
         <a href="#projects">Work</a>
@@ -46,9 +47,16 @@
     </ul>
   </nav>
 
+  <section id="about" class="about-section">
+  <h2 class="about-section-header section-header">About Me</h2>
+
+  <p>My name is Luis Fernando Maschietto Junior, I'm a web developer with vast knowledge in frontend and backend development.</p>
+  <p>I also have experience with Adobe designing Softwares and their open source alternatives.</p>
+  <p>On the section below you can see some of my projects and for more, you can check my GitHub profile at: <a href="https://github.com/lufemas">github.com/lufemas</a></p>
+  </section>
 
 <section id="projects" class="projects-section">
-  <h2 class="projects-section-header">Some of my projects</h2>
+  <h2 class="projects-section-header section-header">Some of my projects</h2>
 
   <div class="projects-grid">
         <!-- <a
@@ -67,6 +75,29 @@
         <span class="code">&#47;&gt;</span>
       </p>
     </a> -->
+
+  <a
+    href="http://stemcanada.ca"
+    target="_blank"
+    class="project project-tile"
+  >
+    <img
+      class="project-image"
+      src="./img/stem.jpg"
+      alt="project"
+    />
+    <p class="project-title">
+      <span class="code">&lt;</span>
+      STEM Canada Portal
+      <span class="code">&#47;&gt;</span>
+    </p>
+
+    <div class="project-about">
+      <p>Worked as Lead Developer on the STEM Canada Portal using WordPress.</p>
+    </div>
+    
+  </a>
+
     <a
       href="https://lufemas.github.io/time-buddy-landing-page/"
       target="_blank"
@@ -82,7 +113,56 @@
         Landing Page
         <span class="code">&#47;&gt;</span>
       </p>
+
+      <div class="project-about">
+        <p>A landing page project for the game Time Buddy.</p>
+      </div>
+      
     </a>
+
+    <a
+    href="https://github.com/lufemas/jr-css"
+    target="_blank"
+    class="project project-tile"
+  >
+    <img
+      class="project-image"
+      src="./img/jr.css.png"
+      alt="project"
+    />
+    <p class="project-title">
+      <span class="code">&lt;</span>
+      JR.css Framework
+      <span class="code">&#47;&gt;</span>
+    </p>
+
+    <div class="project-about">
+      <p>A lightweight, responsive, CSS framework based on bootstrap grid-system.</p>
+    </div>
+    
+  </a>
+
+  <a
+  href="https://github.com/lufemas/jr-sendmail"
+  target="_blank"
+  class="project project-tile"
+>
+  <img
+    class="project-image"
+    src="./img/jr.sendmail.png"
+    alt="project"
+  />
+  <p class="project-title">
+    <span class="code">&lt;</span>
+    JR.sendmail
+    <span class="code">&#47;&gt;</span>
+  </p>
+
+  <div class="project-about">
+    <p>A free and simple way to send emails from your website using Google Apps Script.</p>
+  </div>
+  
+</a>
 
     <a
     href="https://lufemas.github.io/jr-pisa-menu-CSS/index.html"
@@ -99,6 +179,10 @@
       Pisa Menu Pure CSS
       <span class="code">&#47;&gt;</span>
     </p>
+
+    <div class="project-about">
+      <p>A clean vertical navigation bar with a full-page angle animation using plain CSS.</p>
+    </div>
   </a>
 
     <a
@@ -116,6 +200,10 @@
         Technical Documentation
         <span class="code">&#47;&gt;</span>
       </p>
+
+      <div class="project-about">
+        <p>A technical documentation example page for GDScript with a read tracking navigation.</p>
+      </div>
     </a>
 
     <a
@@ -133,6 +221,10 @@
         airbnb Redesign Project
         <span class="code">&#47;&gt;</span>
       </p>
+
+      <div class="project-about">
+        <p>Redesigning of Airbnb web page and branding with plain HTML/CSS/JS.</p>
+      </div>
     </a>
 
     <a
@@ -150,7 +242,13 @@
         Fullstack App
         <span class="code">&#47;&gt;</span>
       </p>
+
+      <div class="project-about">
+        <p>A basic Twitter feed clone built with plain HTML/CSS/JS on the front-end and NodeJs with MongoDB on the server-side.</p>
+      </div>
     </a>
+
+
     <a
       href="https://lufemas.github.io/boid-ai-implementation/"
       target="_blank"
@@ -166,6 +264,9 @@
         AI Algorithm
         <span class="code">&#47;&gt;</span>
       </p>
+      <div class="project-about">
+        <p>An implementation of Boids, as described on Official Craig Reynold's website using pure JavaScript for logic and Phaser 3 for graphics.</p>
+      </div>
     </a>
 
     <a
@@ -183,6 +284,9 @@
         Binary Tree HTML Visualization
         <span class="code">&#47;&gt;</span>
       </p>
+      <div class="project-about">
+        <p>A pure JavaScript binary tree implementation using the DOM to create a visualization.</p>
+      </div>
     </a>
 
 
@@ -202,6 +306,9 @@
         Article Infinite Reading System
         <span class="code">&#47;&gt;</span>
       </p>
+      <div class="project-about">
+        <p>A "next chapter" netflix like system for articles.</p>
+      </div>
     </a>
 
     <a
@@ -219,8 +326,100 @@
       CSS Grid Checkers
       <span class="code">&#47;&gt;</span>
     </p>
+
+    <div class="project-about">
+      <p>A simple Checkers game made only with HTML/CSS for graphics and JavaScript for game logic.</p>
+    </div>
+    
   </a>
 
+<a
+  href="https://chat-socket-jr.herokuapp.com/"
+  target="_blank"
+  class="project project-tile"
+>
+  <img
+    class="project-image"
+    src="./img/chat.png"
+    alt="project"
+  />
+  <p class="project-title">
+    <span class="code">&lt;</span>
+    Sockets Chat
+    <span class="code">&#47;&gt;</span>
+  </p>
+
+  <div class="project-about">
+    <p>A chat app implemented with sockets and server rendering.</p>
+  </div>
+</a>
+
+<a
+  href="https://lufemas.github.io/assignment-landing-page/"
+  target="_blank"
+  class="project project-tile"
+>
+  <img
+    class="project-image"
+    src="./img/show-landing.png"
+    alt="project"
+  />
+  <p class="project-title">
+    <span class="code">&lt;</span>
+    Event Landing Page
+    <span class="code">&#47;&gt;</span>
+  </p>
+
+  <div class="project-about">
+    <p>An event landing page exercise implementation.</p>
+  </div>
+</a>
+
+<a
+  href="https://lufemas.github.io/wddm-event-microsite/"
+  target="_blank"
+  class="project project-tile"
+>
+  <img
+    class="project-image"
+    src="./img/event-micro.png"
+    alt="project"
+  />
+  <p class="project-title">
+    <span class="code">&lt;</span>
+    Event Micro Site
+    <span class="code">&#47;&gt;</span>
+  </p>
+
+  <div class="project-about">
+    <p>A micro website for a fictional event with a retro styling.</p>
+  </div>
+</a>
+
+<div></div>
+
+<a
+  href="https://lufemas.github.io/input-recorder/"
+  target="_blank"
+  class="project project-tile"
+>
+  <img
+    class="project-image"
+    src="./img/input-recorder.png"
+    alt="project"
+  />
+  <p class="project-title">
+    <span class="code">&lt;</span>
+    Scrimba Like App
+    <span class="code">&#47;&gt;</span>
+  </p>
+
+  <div class="project-about">
+    <p>An Input Recorder app that can be used for live or pre-recorded remote courses.</p>
+  </div>
+</a>
+
+<div></div>
   </div>
 
   <a
@@ -258,14 +457,61 @@
       ><i class="fas fa-envelope"></i> maschietto.jr@gmail.com</a
     >
   </div>
+
+  <form class="sendmail">
+
+    <div class="fields">
+      <label class="" for="name">Name <span class="validation-alert" id="name-validation">( Enter your name )</span></label>
+      <input class="" type="text" name="name" id="name">
+    </div>
+
+    <div class="fields">
+      <label class="" for="email">Email <span class="validation-alert" id="email-validation">( Enter a valid Email )</span></label>
+      <input class="" type="email" name="email" id="email">
+    </div>
+
+    <div class="fields">
+      <label class="" for="phone">Phone</label>
+      <input class="" type="text" name="phone" id="phone">
+    </div>
+
+
+    <div class="fields">
+      <label class="" for="message">Message <span class="validation-alert" id="message-validation">( You forgot the message )</span></label>
+      <textarea class="" name="message" id="message" cols="30" rows="10"></textarea>
+    </div>
+
+    <input class="btn btn-sendmail" type="submit" id="send-btn" value="Send">
+
+
+  </form>
+  
 </section>
 
 
 <footer>
+
+  <nav>
+
+    <ul class="nav-list">
+      <li >
+        <a href="#welcome-section">About</a>
+      </li>
+      <li>
+        <a href="#projects">Work</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
   <p>
     &copy; JR Maschietto, 2020
   </p>
 </footer>
 
+<script src="./js/jr.sendmail.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>
