@@ -1,4 +1,4 @@
-
+window.history.replaceState({}, "JR.maschietto", "JRmaschietto.com");
 const $ = (el)=>document.querySelector(el)
 
 
