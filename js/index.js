@@ -77,3 +77,30 @@ function formValidation(){
 
   return check
 }
+
+const projectTiles = Array.prototype.slice.call( document.getElementsByClassName('project') )
+
+document.body.onscroll = e => {
+
+  if(window.innerWidth < 768){
+
+    projectTiles.forEach( tile => {
+      if(tile.getBoundingClientRect().top < ( (window.innerHeight /2) - 120 ) && tile.getBoundingClientRect().top > ( 0 ) ){
+        
+        tile.classList.add('hover')
+      }else{
+        tile.classList.remove('hover')
+  
+      }
+    })
+
+  }
+
+}
+
+// document.body.onclick = ()=> {
+//   console.log(projectTiles[0].getBoundingClientRect().top)
+//   console.log((window.innerHeight /2))
+//   console.log("--------------------")
+// }
+

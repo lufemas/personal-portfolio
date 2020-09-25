@@ -281,7 +281,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 4rem;
-    width: 100%;
+    width: 85%;
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
@@ -297,6 +297,7 @@
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
     transition: all 0.2s ease-out;
+    max-width: 100%;
     /* animation: project-perspective-back .5s forwards ; */
     /* -webkit-backface-visibility: hidden; */
 
@@ -328,7 +329,7 @@
     transition: color 0.3s ease-out;
   }
 
-  .project:hover{
+  .project:hover, .project:focus, .project.hover{
     perspective: 200px;
     transform: scale(1.2);
     z-index: 2;
@@ -354,7 +355,7 @@
     100% {perspective: 0px;}
   } */
 
-  .project:hover .project-about{
+  .project:hover .project-about, .project:focus .project-about, .project.hover .project-about{
 
     bottom: -1px;
     animation: project-about-anim .5s forwards;
