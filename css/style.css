@@ -261,7 +261,7 @@
   
   .projects-section {
     text-align: center;
-    padding: 10rem 2rem;
+    padding: 10rem 0;
     background: #222;
   }
   
@@ -657,6 +657,10 @@
       .welcome-section .hero-gif{
         width: 80%;
         margin: 0 auto;
+      }
+
+      .projects-section {
+        padding: 10rem 2rem;
       }
 
       .sendmail{
