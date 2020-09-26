@@ -70,6 +70,10 @@
     font-weight: 700;
     text-align: center;
   }
+
+  #welcome-section.big-screen{
+    display:none;
+  }
   
   h1 {
     font-family: 'Poppins', sans-serif;
@@ -97,14 +101,9 @@
   
   .welcome-section {
     line-height: 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
     width: 100%;
     height: 100vh;
     background-color: #000;
-    /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
   }
 
   .welcome-section > h1 {
@@ -117,11 +116,6 @@
     font-size: 2.5rem;
     margin-right: 5rem;
     margin-left: auto;
-  }
-
-  .welcome-section span{
-    font-family: 'Raleway', sans-serif;
-    color: var(--main-green);
   }
 
   .welcome-section .hero-gif{
@@ -149,7 +143,7 @@
       background-color: var(--main-purple);
       width: auto;
       font-size: 4rem;
-      padding: 0.5rem 2rem;
+      padding: 0.5rem 2.1rem;
       border-radius: 50%;
       color: black;
       transition: all .5s ease-out;
@@ -161,6 +155,18 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     background-color: var(--main-green); 
+  }
+
+  .welcome-section.small-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-section.small-screen h1 {
+    margin: 0;
+    padding: 0;
   }
 
   /* nav */
@@ -570,9 +576,34 @@
     display: none;
   }
 
+  .purple{
+    color: var(--main-purple)
+  }
 
   @media (min-width: 48em) {
 
+    
+    #welcome-section.big-screen{
+      line-height: 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* align-items: center; */
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
+    }
+  
+    .welcome-section.small-screen{
+      display:none;
+    }
+
+    .welcome-section span{
+      font-family: 'Raleway', sans-serif;
+      color: var(--main-green);
+    }
+  
     .nav {
       justify-content: space-between;
     }
